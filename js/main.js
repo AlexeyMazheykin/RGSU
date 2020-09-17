@@ -1,6 +1,7 @@
 (function () {
     const tabs = document.querySelectorAll('.tab');
     const forms = document.querySelectorAll('.form');
+    const btns = document.querySelectorAll('.btn');
     let tabNav;
 
     const formSelect = function (tabNav) {
@@ -25,7 +26,10 @@
     tabs.forEach(item => {
         item.addEventListener('click', tabsSelect)
     });
-/*     let btn = document.querySelectorAll('.confirm__btn');
-    console.log(btn) */
-
+    
+    btns.forEach(item => {
+        item.addEventListener('click', ev => {
+            ev.preventDefault();
+        });
+    });
 }());
