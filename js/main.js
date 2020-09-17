@@ -25,5 +25,7 @@
     tabs.forEach(item => {
         item.addEventListener('click', tabsSelect)
     });
+/*     let btn = document.querySelectorAll('.confirm__btn');
+    console.log(btn) */
 
 }());
