@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/inputmask.min.js"></script>
+    <title>RGSU</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__wrapper">
+            <div class="header__logo">
+                <img src="./img/brain1.png" alt="RGSU" class="header__logo-pic">
+                <a href="/" class="header__logo-link">Портал НПР РГСУ</a>
+            </div>
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li class="header__item">
+                        <a href="#!" class="header__link">Новости</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#!" class="header__link">Преподаватели</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#!" class="header__link">Вакансии</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#!" class="header__link">Объявления</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#!" class="header__link">Мероприятия</a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="header__btn">Вход на сайт</button>
+        </div>
+    </header>
+    <section class="authentication">
+        <div class="authentication__tabs">
+            <p class="tab tab1 tab__active" data__form="authorization__form">
+                Авторизация
+            </p>
+            <p class="tab tab2" data__form="reg__form">
+                Регистрация
+            </p>
+        </div>
+
+        <form id="authorization" class="authorization__form form form__active">
+            <label for="auth__email" class="auth__email-lbl">Ваш email <span>*</span></label>
+            <input type="email" class="auth__email-input" id="auth__email" placeholder="Укажите адрес электронной почты"
+                form="authorization">
+
+            <label for="auth__pass" class="auth__pass-lbl">Введите пароль <span>*</span></label>
+            <input type="password" class="auth__pass-input" id="auth__pass" placeholder="****" form="authorization">
+
+            <div class="auth__buttons">
+
+                <input type="submit" class="button__add" form="authorization" value="Добавить запись">
+                <a href="#!" class="forgot__pass-link">Забыли пароль?</a>
+            </div>
+        </form>
+        <form id="reg" class="reg__form form">
+            <div class="reg__form-block">
+                <label for="reg__name" class="reg__name-lbl">ФИО <span>*</span></label>
+                <input type="text" class="reg__name-input" id="reg__name" placeholder="Фамилия Имя Отчество" form="reg">
+            </div>
+            <div class="reg__form-block">
+                <div class="reg__form-wrap">
+                    <label for="reg__email" class="reg__email-lbl">Email <span>*</span></label>
+                    <input type="email" class="reg__email-input" id="reg__email"
+                        placeholder="Адрес будет логином на портале" form="reg">
+                </div>
+                <div class="reg__form-wrap">
+                    <label for="reg__tel" class="reg__tel-lbl">Телефон <span>*</span></label>
+                    <input type="tel" class="reg__tel-input" id="reg__tel" form="reg" placeholder="+7(___)___-__-__" pattern="\+7\s?[\(]{0,1}[0-9][0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}">
+                </div>
+            </div>
+            <div class="reg__form-block">
+                <div class="reg__form-wrap">
+                    <label for="reg__snils" class="reg__snils-lbl">СНИЛС <span>*</span></label>
+                    <input type="text" class="reg__snils-input" id="reg__snils" placeholder="___-___-___-__" form="reg" pattern="[0-9]{3}[-]{0,1}[0-9]{3}[-]{0,1}[0-9]{3}[-]{0,1}[0-9]{2}">
+                </div>
+                <div class="reg__form-wrap">
+                    <label for="reg__db" class="reg__db-lbl">Дата рождения <span>*</span></label>
+                    <input type="text" class="reg__db-input" id="reg__db" placeholder="__.__.____" form="reg" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}">
+                </div>
+            </div>
+            <p class="agree">
+                <input type="checkbox" id="data" class="checkbox" form="reg">
+                <label for="data" class="agree-check-lbl">Согласен на обработку моих персональных данных
+                    <span>*</span></label>
+            </p>
+            <p class="agree">
+                <input type="checkbox" id="mailing" class="checkbox" form="reg">
+                <label for="mailing" class="agree-check-lbl">Согласен на обработку моих персональных данных
+                    <span>*</span></label>
+            </p>
+            <div class="reg__buttons">
+                <button class="confirm__btn reg__btn" form="reg">Зарегистрироваться</button>
+                <button class="cansel__btn reg__btn" form="reg">Отказаться</button>
+            </div>
+        </form>
+        <div class="block1"></div>
+        <div class="block2"></div>
+    </section>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
